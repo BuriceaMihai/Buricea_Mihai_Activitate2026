@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1A237E"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI MotorBike Configurator"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Advanced metric specifications &amp; telemetry"
+                android:textColor="#B0BEC5"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Section 1: Identity & Weight -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. GENERAL DETAILS"
+                android:textColor="#1A237E"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etBrandAi"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Brand &amp; Model (e.g. Ducati Panigale)"
+                android:inputType="textCapWords"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etWeightKg"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Dry Weight in kg (e.g. 175.5)"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chassis Category:"
+                android:textSize="12sp"
+                android:textColor="#616161"/>
+
+            <Spinner
+                android:id="@+id/spCategoryAi"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <!-- Section 2: Engine & Electronics -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. POWERTRAIN &amp; SAFETY"
+                android:textColor="#1A237E"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvCapacityLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Engine Displacement: 600 cm³"
+                android:textColor="#212121"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <SeekBar
+                android:id="@+id/sbCapacityCc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="2000"
+                android:progress="600"
+                android:layout_marginBottom="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgEngineTypeAi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <RadioButton
+                    android:id="@+id/rb2StrokeAi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2-Stroke" />
+
+                <RadioButton
+                    android:id="@+id/rb4StrokeAi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4-Stroke"
+                    android:checked="true" />
+            </RadioGroup>
+
+            <Switch
+                android:id="@+id/swElectricAi"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Zero-Emission Electric Motor" />
+
+            <CheckBox
+                android:id="@+id/cbABSAi"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Dual-Channel Cornering ABS"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <!-- Section 3: Rating & Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. SAFETY &amp; PERFORMANCE SCORE"
+                android:textColor="#1A237E"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <RatingBar
+                android:id="@+id/rbRatingAi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="4.5"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/btnResetAi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#78909C"
+                    android:text="Reset"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="6dp"/>
+
+                <Button
+                    android:id="@+id/btnCancelAi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D32F2F"
+                    android:text="Cancel"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveAi"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:backgroundTint="#1A237E"
+                android:text="SAVE CONFIGURATION"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

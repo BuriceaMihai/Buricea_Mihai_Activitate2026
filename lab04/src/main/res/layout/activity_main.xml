@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total MotorBikes: 0"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnAddStandard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add MotorBike (Standard UI)"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnAddAi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add MotorBike (AI Design UI)"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnViewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View MotorBike List" />
+
+</LinearLayout>

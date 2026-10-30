@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitlu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adaugă un Automobil"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introdu marca (ex: Dacia)"
+            android:inputType="text"
+            android:layout_marginBottom="12dp" />
+
+        <CheckBox
+            android:id="@+id/cbInmatriculat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Este înmatriculat"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transmisie:" />
+
+        <RadioGroup
+            android:id="@+id/rgTransmisie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/rbManuala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manuală"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbAutomata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automată"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Combustibil:" />
+
+        <Spinner
+            android:id="@+id/spCombustibil"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grad de siguranță:" />
+
+        <RatingBar
+            android:id="@+id/rbSiguranta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="4.0"
+            android:layout_marginBottom="12dp" />
+
+        <Switch
+            android:id="@+id/swCasco"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Asigurare CASCO activă"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnSalveaza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvează Automobil" />
+
+    </LinearLayout>
+</ScrollView>
